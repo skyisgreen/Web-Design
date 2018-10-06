@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>信息登记表</title>
+</head>
+
+<body>
+	<h1 align="left"> 张她他信息登记表 </h1>
+	
+	<form name ="myform" align="left">  
+		用户名登陆:<input type="text" value="myemail@163.com" size="24" disabled>(不能修改，只能查看)
+		
+	<br><br>真实姓名: <input type="text" size="24" maxlength="10" pattern="^[\u4e00-\u9fa5]{0,}$" placeholder="例如:王三" required>(必需填写，只能输入汉字)
+		
+	<br><br>真实年龄: <input type="number" size="24" maxlength="2" max="120" min="20" required>(必须填写)
+	
+	<br><br>出生日期: <input type="date" size="24" required>(必须填写)
+		
+	<br><br> 电子邮箱: <input type="mail" size="24" placeholder="123@163.com" pattern="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" required >(必须填写)	
+		
+	<br><br> 身份证号: <input type="text" size="24" pattern="^([0-9]){7,18}(x|X)?$" required>(必须填写,能够以数字、字母x结尾的身份证号)	
+		
+	<br><br> 手机号码: <input type="tel" size="24"  required>(必须填写)	
+		
+	<br><br> 个人主页: <input type="url/" size="20" placeholder="https://www.baidu.com" required list="wz">(请选择网址)
+		 <datalist id="wz">
+		 <option value="www.baidu.com"></option>
+	     <option value="www.tianmao.com"></option>
+		 <option value="www.qq.com"></option>
+		 </datalist>	
+		
+	<br><br> 幸运颜色: <input type="color" size="24">(请选择喜欢的颜色)
+		
+		
+	<br><br><input type="submit" value="提交" size="20"> &nbsp;
+     <input type="reset" value="重置" size="20">
+		
+	</form>
+</body>
+</html>
