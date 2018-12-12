@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数字抽奖</title>
+</head>
+	
+<script type="text/javascript">
+		function choujiang(){
+			var a,b,c,d,e,go;
+			do{
+				a=Math.floor(Math.random()*9)+1;
+				b=Math.floor(Math.random()*9)+1;
+				c=Math.floor(Math.random()*9)+1;
+				d=Math.floor(Math.random()*9)+1;
+				e=Math.floor(Math.random()*9)+1;
+				if(a==5||b==5||c==5||d==5||e==5){
+					go=confirm("随机号码是："+a+b+c+d+e+"恭喜你中奖！");
+					document.getElementById('showNum').innerHTML="您中奖幸运号码为: "+a+b+c+d+e;
+					break;
+					
+				}else{
+					go=confirm("机号码是："+a+b+c+d+e+"很遗憾没中奖！");
+				}
+			}while(go);
+		}
+	</script>
+	
+	
+<body>
+	<input type="button" onclick="choujiang()" value="抽奖" />
+	<div id="showNum"></div>
+</body>
+</html>
