@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>计算时间差</title>
+<script type="text/javascript">
+
+	var str,str1,str2,strv1,strv2,s1,s2,result;
+	
+
+	function resultclick()
+	{
+		str1 = document.getElementById("d1");
+		str2 = document.getElementById("d2");
+		str = document.getElementById("res");
+	    strv1 = str1.value;
+		strv2 = str2.value;
+		
+		
+		s1 = new Date(strv1);
+		
+		s2 = new Date(strv2);
+		
+		result = Math.abs((s1 - s2) / 1000 / 60 / 60 / 24);
+		str.value = result;
+		
+		
+	}
+	</script>
+</head>
+
+<body>
+	<table  align="center" style="width: 270px; height: 350px;">
+	
+		<tr>	
+		<td colspan="5">
+			Day 1:<input type="date" id="d1" style="height: 90px; width: 500px; font-size: 50px;"/>
+			</td>
+		
+		</tr>
+		
+		<tr>	
+		<td colspan="5">
+			Day 2:<input type="date" id="d2" style="height: 90px; width: 500px; font-size: 50px;"/>
+			</td>
+		
+		</tr>
+		
+		<tr>	
+		<td colspan="5">
+			Result:<input type="test" disabled="disabled" id="res" style="height: 90px; width: 500px; font-size: 50px;"/>
+			</td>
+		
+		</tr>
+		
+		<tr>
+			<td colspan="3">
+			<input type="button" value="Click This" id="b" onClick="resultclick()"
+				   style="height: 70px; width: 188px; font-size: 35px">
+		    </td>
+		</tr>
+		
+	</table>
+</body>
+</html>
